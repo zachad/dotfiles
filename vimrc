@@ -1,33 +1,39 @@
 set nocompatible
 set nobackup
+set hidden
 set history=50
 set ruler
 set showcmd
 set laststatus=2
 set backspace=2
+set relativenumber
+set number
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Bundle 'VundleVim/Vundle.vim'
 
 " Define bundles via GitHub repos
-"Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-fugitive'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'othree/html5.vim'
 Bundle 'rking/ag.vim'
 Bundle "pangloss/vim-javascript"
-Bundle "myusuf3/numbers.vim"
 Bundle "vim-ruby/vim-ruby"
-Plugin 'fatih/vim-go'
+Bundle 'fatih/vim-go'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tommcdo/vim-exchange'
 
+call vundle#end()
 
 syntax on
 filetype off
@@ -64,7 +70,6 @@ nnoremap <S-h> gT
 nnoremap <S-l> gt
 
 
-set number
 
 " Sippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
@@ -88,3 +93,7 @@ au BufRead,BufNewFile *.md setlocal spell
 " more natural splitting
 set splitbelow
 set splitright
+
+" gitgutter settings
+let g:gitgutter_sign_column_always = 1
+
