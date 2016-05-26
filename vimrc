@@ -32,6 +32,8 @@ Bundle "vim-ruby/vim-ruby"
 Bundle 'fatih/vim-go'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tommcdo/vim-exchange'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
@@ -65,9 +67,9 @@ noremap   <Right>  <NOP>
 " make it easier to get around the current directory
 cabbr %% <C-R>=expand('%:p:h')<CR>
 
-" faster <SHIFT>-h or r tab switching
-nnoremap <S-h> gT
-nnoremap <S-l> gt
+" better buffer switching
+nmap <S-h> :bprevious<CR>
+nmap <S-l> :bnext<CR>
 
 
 
@@ -96,4 +98,8 @@ set splitright
 
 " gitgutter settings
 let g:gitgutter_sign_column_always = 1
+set updatetime=250
 
+" airline buffers
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
