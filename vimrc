@@ -8,6 +8,7 @@ set laststatus=2
 set backspace=2
 set relativenumber
 set number
+set autowrite
 
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -103,3 +104,6 @@ set updatetime=250
 " airline buffers
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+"vim-go things
+let g:go_fmt_command = "goimports"
