@@ -6,7 +6,6 @@ set ruler
 set showcmd
 set laststatus=2
 set backspace=2
-set relativenumber
 set number
 set autowrite
 
@@ -55,6 +54,7 @@ set ignorecase
 set smartcase
 set showmatch
 set incsearch
+set nohlsearch
 
 
 " faster than using the escape key
@@ -98,8 +98,8 @@ set splitbelow
 set splitright
 
 " gitgutter settings
-let g:gitgutter_sign_column_always = 1
-set updatetime=250
+set signcolumn=yes
+set updatetime=1000
 
 " airline buffers
 let g:airline#extensions#tabline#enabled = 1
