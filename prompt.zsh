@@ -55,11 +55,11 @@ preexec() {
 precmd() {
 	vcs_info
 	# Add `%*` to display the time
-  print -P "\n$user_at_host %F{blue}%~%F{236}$vcs_info_msg_0_`git_dirty` %F{236}%f %F{yellow}`cmd_exec_time`%f"
+  print -P "\n$user_at_host:%F{blue}%~%F{245}$vcs_info_msg_0_`git_dirty` %F{245}%f %F{yellow}`cmd_exec_time`%f"
 	# Reset value since `preexec` isn't always triggered
 	unset cmd_timestamp
 }
 
 # Prompt turns red if the previous command didn't exit with 0
-PROMPT='%(?.%F{magenta}.%F{red})❯%f '
+PROMPT='%(?.%F{green}.%F{red})❯%f '
 #RPS1='%F{black}$ruby_version%f'
