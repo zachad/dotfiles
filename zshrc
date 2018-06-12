@@ -9,8 +9,8 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
-export PATH="$HOME/.rbenv/bin:/opt/phantomjs/bin:/opt/rh/qt48/root/usr/lib64/qt4/bin/:$PATH"
-#eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 alias b='bundle'
 alias bx='bundle exec'
